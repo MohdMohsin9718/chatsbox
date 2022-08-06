@@ -14,6 +14,7 @@ const Dashboard = () => {
   const { user } = useSelector(state => state.auth);
   const { posts, isError, message } = useSelector(state => state.posts);
 
+  console.log(posts);
   const onSubmit = e => {
     e.preventDefault();
     const data = {
