@@ -35,7 +35,7 @@ const Dashboard = () => {
     } else {
       dispatch(getPosts());
     }
-  }, [user, navigate, isError, message, dispatch]);
+  }, []);
 
   return (
     <>
