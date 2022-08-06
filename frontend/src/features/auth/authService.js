@@ -1,5 +1,7 @@
 import axios from 'axios';
-const dotenv = require('dotenv').config();
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const API_URL = `http://localhost:${process.env.PORT}/`;
 
