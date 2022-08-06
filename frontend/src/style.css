@@ -1,0 +1,285 @@
+@import url(https://fonts.google.com/specimen/Rubik);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: hsl(223deg, 19%, 93%);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h4 {
+  font-weight: normal;
+}
+h4 a {
+  color: hsl(238deg, 40%, 52%);
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid hsl(238deg, 40%, 52%);
+  margin-bottom: 50px;
+}
+.header .logo {
+  font-size: large;
+}
+.header span {
+  font-weight: bold;
+  color: hsl(238deg, 40%, 52%);
+}
+.header ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
+.header li {
+  margin-left: 20px;
+}
+.header li :hover {
+  color: #777;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  padding: 0 20px;
+}
+.heading p {
+  color: #828282;
+  text-align: center;
+}
+
+.form,
+.content {
+  width: 70%;
+  margin: 0 auto;
+}
+.form .form-group,
+.content .form-group {
+  margin-bottom: 10px;
+}
+.form .form-group input,
+.form .form-group textarea,
+.form .form-group select,
+.content .form-group input,
+.content .form-group textarea,
+.content .form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-family: inherit;
+}
+
+.post-form {
+  width: 63%;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background: #000;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  -webkit-appearance: button;
+     -moz-appearance: button;
+          appearance: button;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn :hover {
+  transform: scale(0.98);
+}
+
+.btn-block {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.post {
+  background-color: white;
+  margin: 10px 0;
+  padding: 20px;
+  position: relative;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+}
+
+.date {
+  color: rgb(128, 128, 128);
+}
+
+.detail {
+  display: flex;
+  margin-bottom: 1em;
+}
+
+.name {
+  margin-right: 20px;
+  font-weight: bold;
+  color: hsl(238deg, 40%, 52%);
+}
+
+p {
+  color: rgb(128, 128, 128);
+  text-align: left;
+}
+
+.reply-delete-box {
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: hsl(358deg, 79%, 66%);
+}
+
+.delete {
+  margin-right: 10px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: hsl(358deg, 79%, 66%);
+}
+
+.reply {
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: hsl(238deg, 40%, 52%);
+  margin-right: 10px;
+}
+
+.comments {
+  display: grid;
+  grid-template-columns: 50px auto;
+}
+.comments form {
+  width: 110%;
+  margin-left: 5px;
+}
+
+.line {
+  border: 1px solid hsl(239deg, 57%, 85%);
+  width: 2px;
+  height: 90%;
+  margin: auto 0 auto auto;
+  border-radius: 50%;
+}
+
+.comment {
+  background-color: white;
+  width: 90%;
+  margin: 10px 0 10px auto;
+  padding: 20px;
+  position: relative;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  justify-content: flex-end;
+}
+
+.likesCounter {
+  width: 35px;
+  height: 70px;
+  background-color: hsl(223deg, 19%, 93%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: hsl(238deg, 40%, 52%);
+  align-items: center;
+  border-radius: 3px;
+}
+.likesCounter svg {
+  height: 0.8em;
+  width: 0.8em;
+  color: hsl(239deg, 57%, 85%);
+}
+.likesCounter svg :hover {
+  cursor: pointer;
+  color: hsl(238deg, 40%, 52%);
+}
+
+@media only screen and (max-width: 375px) {
+  .header {
+    margin-bottom: 20px;
+  }
+
+  .heading {
+    margin: 10px auto;
+  }
+
+  .posts {
+    width: 345px;
+    position: relative;
+    left: -55px;
+  }
+
+  .post {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 10px;
+    padding: 20px 20px 10px 20px;
+  }
+
+  .likesCounter {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.8em;
+    height: 2em;
+    width: 5em;
+    border-radius: 0.4em;
+  }
+
+  .reply-delete-box {
+    position: absolute;
+    top: auto;
+    bottom: 18px;
+  }
+
+  .comments {
+    grid-template-columns: 20px auto;
+  }
+
+  .comment {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-bottom: 10px;
+  }
+  .comment .reply-delete-box {
+    bottom: 18px;
+  }
+
+  .detail {
+    margin-bottom: 8px;
+  }
+}/*# sourceMappingURL=style.css.map */
