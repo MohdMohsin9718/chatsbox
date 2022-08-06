@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = `${process.env.API_URL}/`;
+const API_URL = `${process.env.PORT}/`;
 
 const register = async userData => {
   const response = await axios.post(API_URL, userData);
