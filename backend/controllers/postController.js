@@ -7,7 +7,6 @@ const Post = require('../models/postModel');
 // @access  Public
 const getPost = asyncHandler(async (req, res) => {
   const posts = await Post.find();
-
   res.status(200).json(posts);
 });
 

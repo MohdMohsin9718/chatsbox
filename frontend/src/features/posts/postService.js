@@ -9,7 +9,7 @@ const getPosts = async token => {
     },
   };
 
-  const response = await axios.get(API_URL, config);
+  const response = await axios.post(API_URL, '', config);
 
   return response.data;
 };
@@ -21,7 +21,7 @@ const uploadPost = async (data, token) => {
     },
   };
 
-  const response = await axios.post(API_URL, data, config);
+  const response = await axios.post(API_URL + '/post', data, config);
 
   return response.data;
 };

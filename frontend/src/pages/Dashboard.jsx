@@ -14,7 +14,6 @@ const Dashboard = () => {
   const { user } = useSelector(state => state.auth);
   const { posts, isError, message } = useSelector(state => state.posts);
 
-  console.log(posts);
   const onSubmit = e => {
     e.preventDefault();
     const data = {
@@ -35,14 +34,13 @@ const Dashboard = () => {
     } else {
       dispatch(getPosts());
     }
-  }, []);
+  }, [dispatch, isError, navigate, user, message]);
 
   return (
     <>
       <section className='heading'>
         <h1>Welcome {user && user.name}</h1>
       </section>
-
       <div className='content'>
         <div className='posts'>
           {posts.map(post => (

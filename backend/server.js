@@ -6,8 +6,8 @@ const { errorHandler } = require('./middleware/errorMiddleware');
 const dotenv = require('dotenv').config();
 const cors = require('cors');
 
-const port = process.env.PORT || 6868;
-console.log(port);
+const port = process.env.PORT;
+
 const app = express();
 
 connectDB();
@@ -24,8 +24,8 @@ app.use(
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../frontend/build')));
 
-  app.get('*', (req, res) =>
-    res.sendFile(path.resolve(__dirname, '../frontend', 'build', 'index.html'))
+  app.get('/*', (req, res) =>
+    res.sendFile(path.join(__dirname, '../', 'frontend', 'build', 'index.html'))
   );
 } else {
   app.get('/', (req, res) => res.send('Please set to prduction'));
